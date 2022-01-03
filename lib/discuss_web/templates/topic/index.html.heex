@@ -1,0 +1,18 @@
+<h2>Topics</h2>
+<ul class="collection">
+    <%= for topic <- @topics do %>
+    <li class="collection-item"> 
+    <%= topic.title %>
+    <div class="right">
+    <%= link "Edit", to: Routes.topic_path(@conn, :edit, topic.id) %>
+    <%= link "Delete", to: Routes.topic_path(@conn, :delete, topic), method: :delete %>
+    </div>
+     </li>
+    <% end %>
+</ul>
+
+<div class="fixed-action-btn">
+   <%= link to: Routes.topic_path(@conn, :new), class: "waves-effect btn-floating waves-light red btn-large" do %> 
+   <i class="material-icons">add</i>
+   <% end %>
+</div>
