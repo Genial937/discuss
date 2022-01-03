@@ -12,6 +12,7 @@ defmodule Discuss.User do
     field :phone, :string
     field :birthday, :string
     field :description, :string
+    has_many :topics, Discuss.Topic
 
     timestamps()
   end
