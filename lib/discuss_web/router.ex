@@ -25,7 +25,7 @@ defmodule DiscussWeb.Router do
     pipe_through :browser
 
     get "/:provider", AuthController, :request
-    get "/:provider/callback", AuthController, :callback
+    get "/github/callback", AuthController, :callback
   end
 
   # Other scopes may use custom stacks.
